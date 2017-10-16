@@ -1,0 +1,110 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	background-color: #fafafa; 
+}
+
+button{
+	background-color: #3897f0;
+	color: white;
+	border : solid #3897f0 1px;
+	padding: 7px 10px;	
+	margin: 10px 0px;
+	width: 250px;
+	transition: background-color .4s;
+}
+
+button:hover{
+	cursor: pointer;
+	background-color: #6daeec;
+}
+
+input{
+	margin: 3px 0px;
+	width: 230px;
+	padding: 5px 10px;
+}
+
+a{
+    color: #3897f0;
+    text-decoration: none;
+}
+
+hr{
+    width: 50%;
+}
+
+h1{
+	font-family: billabong;
+	font-size: 50px;
+	margin: 0px;
+}
+
+h3{
+	margin-top: 10px;
+	color: #999;
+	font-family: "Roboto", "Calibri";
+}
+
+p{
+	color: #999;
+	font-family: "Roboto", "Calibri";
+}
+
+.line{
+	margin-top: 6px;
+	font-weight: 500;
+}
+
+
+#form{
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.content{
+	margin: 0 auto;
+	background-color: white;
+	padding: 15px 0px;
+	width: 25%;
+	text-align: center;
+	margin: 25px auto 25px auto;
+	box-shadow: 0px 0px 2px grey;
+}
+
+button, input{
+	border-radius: 2px;
+}
+
+input{
+    height: 25px;
+	border: 1px solid #dddddd;
+	background-color: #fafafa;
+}
+
+input::-webkit-input-placeholder{
+	color: #999;
+}
+
+#privacy{
+	font-size: 14px;
+	margin-top: 3px;
+	color: #888;
+}
+
+.login{
+    font-size: 14px;
+    margin : 5px;
+    color : black;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td{
+    padding-top: 20px;
+    border-bottom: 1px solid #999;
+	font-family: "Roboto", "Calibri";
+}
