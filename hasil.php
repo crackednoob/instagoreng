@@ -1,9 +1,18 @@
+
 <html>
     <head>
         <title>Hasil</title>
     	<link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
+        <?php
+        $conn=mysql_connect("localhost", "root", "");
+		mysql_select_db("dbinstagoreng");
+		$email=$_POST['email'];$fullname=$_POST['fullname'];
+		$username=$_POST['username'];$password=$_POST['password'];
+		$sql="insert into tbuser (email, fullname, username, password) values ('$email', '$nama', '$username', '$password')";
+		mysql_query($sql);
+        ?>
         <div id="hasil">
             <div class="content">
                 <center>
