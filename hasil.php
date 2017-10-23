@@ -1,4 +1,3 @@
-
 <html>
     <head>
         <title>Hasil</title>
@@ -6,12 +5,27 @@
     </head>
     <body>
         <?php
-        $conn=mysql_connect("localhost", "root", "");
-		mysql_select_db("dbinstagoreng");
-		$email=$_POST['email'];$fullname=$_POST['fullname'];
-		$username=$_POST['username'];$password=$_POST['password'];
-		$sql="insert into tbuser (email, fullname, username, password) values ('$email', '$fullname', '$username', '$password')";
-		mysql_query($sql);
+            $DBServer = 'localhost';
+            $DBUser = 'root';
+            $DBPass = '';
+            $DBName = 'dbinstagoreng';
+            $conn = new mysqli($DBServer, $DBUser, $DBPass, $DBName);
+        
+            if ($conn->connect_error) {
+                trigger_error('Database connection failed: '. $conn->connect_error, E_USER_ERROR);
+            }
+            
+            $email=$_POST['email'];$fullname=$_POST['fullname'];
+            $username=$_POST['username'];$password=$_POST['password'];
+        
+            $sql = "INSERT INTO tbuser (username, fullname, email, password) VALUES ('$username', '$fullname', '$email', '$password')";
+        
+            if ($conn->query($sql) === false){
+                trigger_error('Wrong SQL: ' . $sql . 'Error: ' . $conn->error, E_USER_ERROR);
+            } else {
+                $last_inserted_id = $conn->insert_id;
+                $affected_rows = $conn->affected_rows;
+            }
         ?>
         <div id="hasil">
             <div class="content">
